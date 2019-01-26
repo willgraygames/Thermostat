@@ -244,7 +244,7 @@ MonoBehaviour:
   smoothing: 2
   cursor: {fileID: 0}
   interactText: {fileID: 0}
-  interactRange: 0
+  interactRange: 100
   mainCamera: {fileID: 762008556}
   speed: 10
   dropsLayer:

@@ -37,7 +37,10 @@ public class PlayerController : NetworkBehaviour
     bool isWalking;
     public Animator itemMessage;
     public Animator itemCount;
+    public Animator animator;
     bool interacting;
+
+    private bool isOpen = false;
 
 
     void Awake()
@@ -86,15 +89,17 @@ public class PlayerController : NetworkBehaviour
         if (Physics.Raycast(myRay, out hit, interactRange))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward));
-            if (hit.collider.gameObject.tag == "Pit" && myInventory.Count > 0)
+            if (hit.collider.gameObject.tag == "Openable")
             {
                 print("hit something");
-                interactText.text = "Feed the Pit";
-                cursor.SetActive(true);
-                myInventory.RemoveAll(item => item == null);
-                if (Input.GetMouseButtonDown(0) && myInventory.Count > 0 && interacting == false)
+                //interactText.text = "Open";
+                //cursor.SetActive(true);
+                
+                if (Input.GetMouseButtonDown(0))
                 {
+                    print("We clicked that b");
                     interacting = true;
+                    animator.SetBool("open", isOpen);
                 }
             }
             else if (hit.collider.tag == "Fire" && myInventory.Count > 0)
