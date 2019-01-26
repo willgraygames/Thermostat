@@ -95,11 +95,17 @@ public class PlayerController : NetworkBehaviour
                 //interactText.text = "Open";
                 //cursor.SetActive(true);
                 
-                if (Input.GetMouseButtonDown(0))
+                if (isOpen = false && Input.GetMouseButtonDown(0))
                 {
                     print("We clicked that b");
                     interacting = true;
                     animator.SetBool("open", isOpen);
+                    isOpen = true;
+                }
+                if (isOpen = true && Input.GetMouseButtonDown(0))
+                {
+                    print("its now closed");
+                    isOpen = false;
                 }
             }
             else if (hit.collider.tag == "Fire" && myInventory.Count > 0)
