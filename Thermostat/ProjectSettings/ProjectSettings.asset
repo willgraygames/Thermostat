@@ -611,10 +611,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: a4da3ae7-fae3-4abe-883d-fc0211ea3026
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Thermostat
+  organizationId: ougridlab
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
