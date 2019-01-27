@@ -7,7 +7,10 @@ public class GameManager : NetworkBehaviour
 {
     public static GameManager Instance { get; protected set; }
 
-    public int currentTemp;
+    [SyncVar]
+    public int currentTemp = 70;
+
+    public List<GameObject> playerList = new List<GameObject>();
 
     private void Awake()
     {
@@ -18,8 +21,14 @@ public class GameManager : NetworkBehaviour
         {
             Instance = this;
         }
-    } 
+    }
 
+    private void Update()
+    {
+        
+    }
+
+    
     public void ChangeTemp(int tempChange)
     {
         currentTemp += tempChange;
