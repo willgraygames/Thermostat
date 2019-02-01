@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: 6114fe75a339e2f448ac010582515eab
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group53
+    100004: group56
+    100006: group57
+    100008: group58
+    100010: group59
+    100012: group60
+    100014: group61
+    100016: group62
+    100018: pasted__group52
+    100020: pasted__group52_pasted__pCube5
+    100022: pasted__group53
+    100024: pasted__group53 1
+    100026: pasted__group53_pasted__pasted__pCube5
+    100028: pasted__group54
+    100030: pasted__group55
+    100032: pasted__group56
+    100034: pasted__group56 1
+    100036: pasted__group58
+    100038: pasted__group58 1
+    100040: pasted__group61
+    100042: pasted__group61_pasted__pasted__group53_pasted__pasted__pasted__pCube5
+    100044: pasted__pasted__group52
+    100046: pasted__pasted__group52 1
+    100048: pasted__pasted__group52_pasted__pCube5
+    100050: pasted__pasted__group52_pasted__pCube5 1
+    100052: pasted__pasted__group53
+    100054: pasted__pasted__group53 1
+    100056: pasted__pasted__group53 2
+    100058: pasted__pasted__group53_pasted__pasted__pCube5
+    100060: pasted__pasted__group54
+    100062: pasted__pasted__group54 1
+    100064: pasted__pasted__group54 2
+    100066: pasted__pasted__group55
+    100068: pasted__pasted__group55 1
+    100070: pasted__pasted__pasted__group54
+    100072: pasted__pasted__pasted__group54 1
+    100074: pasted__pasted__pasted__pasted__pCube5
+    100076: pasted__pasted__pasted__pasted__pCube5 1
+    100078: pasted__pasted__pasted__pCube5
+    100080: pasted__pasted__pasted__pCube5 1
+    100082: pasted__pasted__pasted__pCube5 2
+    100084: pasted__pasted__pasted__pCube5 3
+    100086: pasted__pasted__pasted__pCube5 4
+    100088: pasted__pasted__pasted__pCube5 5
+    100090: pasted__pasted__pasted__pCube5 6
+    100092: pasted__pasted__pasted__pCube5 7
+    100094: pasted__pasted__pCube5
+    100096: pasted__pasted__pCube5 1
+    100098: pasted__pasted__pCube5 2
+    100100: pasted__pasted__pCube5 3
+    100102: pasted__pasted__pCube5 4
+    100104: pasted__pasted__pCube5 5
+    100106: pasted__pasted__transform45
+    100108: pasted__pasted__transform45 1
+    100110: pasted__pasted__transform46
+    100112: pasted__pasted__transform46 1
+    100114: pasted__pasted__transform47
+    100116: pasted__pasted__transform47 1
+    100118: pasted__pasted__transform48
+    100120: pasted__pasted__transform48 1
+    100122: pasted__pCube5
+    100124: pasted__pCube5 1
+    100126: pasted__transform45
+    100128: pasted__transform46
+    100130: pasted__transform47
+    100132: pasted__transform48
+    100134: pasted__transform49
+    100136: pasted__transform50
+    100138: pCube4
+    100140: pCube6
+    100142: transform49
+    100144: transform50
+    100146: transform51
+    100148: transform52
+    100150: transform53
+    100152: transform54
+    100154: transform55
+    100156: transform56
+    100158: transform57
+    100160: transform58
+    100162: transform59
+    400000: //RootNode
+    400002: group53
+    400004: group56
+    400006: group57
+    400008: group58
+    400010: group59
+    400012: group60
+    400014: group61
+    400016: group62
+    400018: pasted__group52
+    400020: pasted__group52_pasted__pCube5
+    400022: pasted__group53
+    400024: pasted__group53 1
+    400026: pasted__group53_pasted__pasted__pCube5
+    400028: pasted__group54
+    400030: pasted__group55
+    400032: pasted__group56
+    400034: pasted__group56 1
+    400036: pasted__group58
+    400038: pasted__group58 1
+    400040: pasted__group61
+    400042: pasted__group61_pasted__pasted__group53_pasted__pasted__pasted__pCube5
+    400044: pasted__pasted__group52
+    400046: pasted__pasted__group52 1
+    400048: pasted__pasted__group52_pasted__pCube5
+    400050: pasted__pasted__group52_pasted__pCube5 1
+    400052: pasted__pasted__group53
+    400054: pasted__pasted__group53 1
+    400056: pasted__pasted__group53 2
+    400058: pasted__pasted__group53_pasted__pasted__pCube5
+    400060: pasted__pasted__group54
+    400062: pasted__pasted__group54 1
+    400064: pasted__pasted__group54 2
+    400066: pasted__pasted__group55
+    400068: pasted__pasted__group55 1
+    400070: pasted__pasted__pasted__group54
+    400072: pasted__pasted__pasted__group54 1
+    400074: pasted__pasted__pasted__pasted__pCube5
+    400076: pasted__pasted__pasted__pasted__pCube5 1
+    400078: pasted__pasted__pasted__pCube5
+    400080: pasted__pasted__pasted__pCube5 1
+    400082: pasted__pasted__pasted__pCube5 2
+    400084: pasted__pasted__pasted__pCube5 3
+    400086: pasted__pasted__pasted__pCube5 4
+    400088: pasted__pasted__pasted__pCube5 5
+    400090: pasted__pasted__pasted__pCube5 6
+    400092: pasted__pasted__pasted__pCube5 7
+    400094: pasted__pasted__pCube5
+    400096: pasted__pasted__pCube5 1
+    400098: pasted__pasted__pCube5 2
+    400100: pasted__pasted__pCube5 3
+    400102: pasted__pasted__pCube5 4
+    400104: pasted__pasted__pCube5 5
+    400106: pasted__pasted__transform45
+    400108: pasted__pasted__transform45 1
+    400110: pasted__pasted__transform46
+    400112: pasted__pasted__transform46 1
+    400114: pasted__pasted__transform47
+    400116: pasted__pasted__transform47 1
+    400118: pasted__pasted__transform48
+    400120: pasted__pasted__transform48 1
+    400122: pasted__pCube5
+    400124: pasted__pCube5 1
+    400126: pasted__transform45
+    400128: pasted__transform46
+    400130: pasted__transform47
+    400132: pasted__transform48
+    400134: pasted__transform49
+    400136: pasted__transform50
+    400138: pCube4
+    400140: pCube6
+    400142: transform49
+    400144: transform50
+    400146: transform51
+    400148: transform52
+    400150: transform53
+    400152: transform54
+    400154: transform55
+    400156: transform56
+    400158: transform57
+    400160: transform58
+    400162: transform59
+    2100000: lambert3
+    2100002: lambert16
+    2100004: lambert15
+    2100006: lambert13
+    2100008: lambert14
+    2100010: lambert17
+    2100012: lambert11
+    2100014: lambert12
+    2300000: pCube6
+    3300000: pCube6
+    4300000: pCube6
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

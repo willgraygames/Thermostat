@@ -31,6 +31,9 @@ public class PlayerMaster : NetworkBehaviour
 
     public GameObject myCanvas;
 
+    public int heatThreshold;
+    public int coldThreshold;
+
     int pitObjects;
     int lastPitObjects;
     public AudioSource footsteps;
@@ -42,6 +45,7 @@ public class PlayerMaster : NetworkBehaviour
     bool interacting;
 
     public Text tempText;
+    public Text endText;
 
     private bool isOpen = false;
     public bool hotPlayer;
@@ -74,7 +78,7 @@ public class PlayerMaster : NetworkBehaviour
 
     void Update()
     {
-        if (!isLocalPlayer)
+        if (!isLocalPlayer && GameManager.Instance.end)
         {
             return;
         }
@@ -297,15 +301,30 @@ public class PlayerMaster : NetworkBehaviour
     void CmdChangeTemp(int change)
     {
         GameManager.Instance.currentTemp += change;
+        if (GameManager.Instance.currentTemp > heatThreshold || GameManager.Instance.currentTemp < coldThreshold)
+        {
+            GameManager.Instance.end = true;
+        }
         RpcUpdateTempValueClientSide(GameManager.Instance.currentTemp);
     }
 
     [ClientRpc]
     public void RpcUpdateTempValueClientSide (int tempValue)
     {
+        if (GameManager.Instance.currentTemp > heatThreshold || GameManager.Instance.currentTemp < coldThreshold)
+        {
+            GameManager.Instance.end = true;
+            if (GameManager.Instance.currentTemp > heatThreshold)
+            {
+                CmdEndTheGame(true);
+            } else
+            {
+                CmdEndTheGame(false);
+            }
+        }
         for (int i = 0; i < GameManager.Instance.playerList.Count; i++)
         {
-            GameManager.Instance.playerList[i].GetComponent<PlayerMaster>().tempText.text = tempValue + "";
+            GameManager.Instance.playerList[i].GetComponent<PlayerMaster>().tempText.text = tempValue + "°";
         }
     }
 
@@ -332,5 +351,42 @@ public class PlayerMaster : NetworkBehaviour
     public void RpcChangeObjectState (GameObject item, ItemState myState)
     {
         item.GetComponent<TemperatureItem>().myState = myState;
+    }
+
+    [Command]
+    public void CmdEndTheGame (bool whoWon)
+    {
+        print("Command running");
+        RpcEndTheGame(whoWon);
+    }
+
+    [ClientRpc]
+    public void RpcEndTheGame (bool whoWon)
+    {
+        for (int i = 0; i < GameManager.Instance.playerList.Count; i++)
+        {
+            if (whoWon)
+            {
+                endText.text = "Heat Won!";
+                
+                Invoke("ThrowBackToTheLobby", 5f);
+            }
+            else if (!whoWon)
+            {
+                endText.text = "Cold Won!";
+                Invoke("ThrowBackToTheLobby", 5f);
+            }
+        }
+        
+    }
+
+
+    public void ThrowBackToTheLobby ()
+    {
+        print("Throwback");
+        NetworkLobbyManager myLobby = GameObject.FindObjectOfType<NetworkLobbyManager>();
+        myLobby.StopServer();
+        myLobby.StopClient();
+        
     }
 }

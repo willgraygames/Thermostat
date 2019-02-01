@@ -10,6 +10,9 @@ public class GameManager : NetworkBehaviour
     [SyncVar]
     public int currentTemp = 70;
 
+    [SyncVar]
+    public bool end;
+
     public List<GameObject> playerList = new List<GameObject>();
 
     private void Awake()
@@ -21,6 +24,8 @@ public class GameManager : NetworkBehaviour
         {
             Instance = this;
         }
+
+        StartCoroutine(EndGame());
     }
 
     private void Update()
@@ -32,5 +37,27 @@ public class GameManager : NetworkBehaviour
     public void ChangeTemp(int tempChange)
     {
         currentTemp += tempChange;
+    }
+
+    IEnumerator EndGame ()
+    {
+        print("coroutine is running");
+        yield return new WaitUntil(() => end == true);
+        print("got it");
+        if (currentTemp > 80)
+        {
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                print("should be ending");
+                playerList[i].GetComponent<PlayerMaster>().CmdEndTheGame(true);
+            }
+        } else if (currentTemp < 60)
+        {
+            for (int i = 0; i < playerList.Count; i++)
+            {
+                playerList[i].GetComponent<PlayerMaster>().CmdEndTheGame(false);
+            }
+        }
+        yield return new WaitForSeconds(5);
     }
 }
